@@ -2,11 +2,7 @@ if v:version < '703'
   finish
 endif
 
-if !s:has_supported_python
-  finish
-endif
-
-function! s:get_visual_selection()
+function! s:GetVisualSelection()
   " Why is this not a built-in Vim script function?!
   let [lnum1, col1] = getpos("'<")[1:2]
   let [lnum2, col2] = getpos("'>")[1:2]
